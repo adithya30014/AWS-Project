@@ -1,0 +1,62 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+:root
+{
+  --primary:"#163A66"
+}
+
+/* BHMUPI.css */
+.alert-container {
+     position: relative;
+  top:-21rem;
+  left:-20rem;
+  
+  transition: all 1s ease-in-out;
+  opacity:0;
+}
+
+.alert-container.show {
+  opacity: 1;
+}
+.alertmsg
+{
+ 
+  width:50rem;
+   
+}
+.cloimg
+{
+  scale: 1 1;
+}
+.cloimg:hover
+{
+  scale: 2 2;
+}
+/* styles.css */
+.singout-btn {
+  color: black;
+  background-color: none;
+  padding: 0rem 2rem;
+  border: 2px solid #163A66 !important;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.singout-hide {
+  content: '';
+  width: 10rem;
+  overflow: hidden;
+  height: 10rem;
+  background-color: #163A66;
+  position: absolute;
+  right: 8rem;
+  transition: transform .7s ease-in-out;
+  z-index: -1; /* Add this line to send the background behind the content */
+}
+
+.singout-btn:hover .singout-hide {
+  transform: translateX(8rem);
+}

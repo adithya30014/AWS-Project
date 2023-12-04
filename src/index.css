@@ -1,0 +1,178 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import './Sass/varaibles.scss';
+:root
+{
+  --primary:"#163A66"
+}
+
+a
+{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  padding: 1.5rem;
+}
+.issue-items
+{
+  border: none;
+  
+  width: fit-content;
+  padding: .7rem 1.5rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: var(--primary);
+  color: white;
+}
+.address:hover
+{
+  box-shadow:2px 2px #5799F9 ;
+}
+.img {
+  position: relative;
+ transition: top .4s ease-in-out;
+  top: 0; /* Set the initial position */
+}
+
+.img:hover {
+  top: -0.7rem; /* Change the position on hover */
+  transition: top .4s ease-in-out; /* Add a specific transition for 'top' property */
+}
+body
+{
+overflow-x: hidden;
+}
+
+
+/* image slide */
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow content for smoother transition */
+}
+
+.slider-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio; adjust as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  object-fit: cover;
+  object-position: center;
+}
+.slider-image:hover
+{
+  top:-1rem;
+}
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+ background: "#163A66";
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.cardimg {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1); /* Initial scale (no change) */
+  transition: transform .6s; /* Add a transition for smooth scaling */
+}
+
+.cardimg:hover {
+  z-index: 11;
+  transform: scale(1.15); /* Scale the element to 2x size on hover */
+}
+.card
+{
+  text-align: justify;
+  white-space: wrap;
+}
+.viewtag
+{
+position: relative;
+cursor: pointer;
+}
+.viewtag::after
+
+{
+content:"";
+position: absolute;
+left: 0;
+bottom: -0.8rem;
+height: 3px;
+width: 100%;
+background-color: #163A66;
+scale: 0 1;
+transition:  scale 450ms;
+
+
+}
+.viewtag:hover::after
+{
+  scale: 1 1;
+}
+
+/* exisiting page */
+.exsimg
+{
+  scale: 1;
+}
+.exsimg:hover
+{
+  scale: 1.05;
+}
+.exsimg1
+{
+  scale: 1.5;
+}
+.exsimg1:hover
+{
+  scale: 2;
+}
+
+/* YourStyles.css */
+
+.shop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  width: 20rem;
+  background: #163a66;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.shop-link {
+  text-decoration: none;
+  color: white;
+}
+
+.shop-container:hover {
+  transform: scaleX(1.1);
+}
